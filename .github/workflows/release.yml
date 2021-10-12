@@ -39,9 +39,9 @@ jobs:
       - name: Dotnet pack
         run: dotnet pack src/Ljbc1994.Blazor.IntersectionObserver/*.csproj --configuration Release --verbosity Detailed
       
-      - name: Dotnet publish to nuget
-        run: dotnet nuget push src/Ljbc1994.Blazor.IntersectionObserver/bin/Release/*.nupkg -k $NUGET_AUTH_TOKEN -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols true
+      - name: Dotnet publish to GitHub registry
+        run: dotnet nuget push src/Ljbc1994.Blazor.IntersectionObserver/bin/Release/*.nupkg -k ${GITHUB_TOKEN} -s https://nuget.pkg.github.com/gbryer/index.json --skip-duplicate --no-symbols true
         env:
-          NUGET_AUTH_TOKEN: ${{ secrets.NUGET_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       
