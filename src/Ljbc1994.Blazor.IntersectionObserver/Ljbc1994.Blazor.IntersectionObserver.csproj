@@ -16,7 +16,7 @@
     <Title>Blazor Intersection Observer</Title>
     <Description>Intersection Observer API for Blazor applications</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>3.0.1</Version>
+    <Version>3.0.2</Version>
     <Product>BlazorIntersectionObserver</Product>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
